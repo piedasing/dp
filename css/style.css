@@ -1,0 +1,164 @@
+@charset "UTF-8";
+html, body, #mypage, #nav, #home {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "微軟正黑體";
+  background-color: #ddd; }
+
+#nav {
+  display: none;
+  height: 0; }
+  #nav .sitename {
+    font-size: 25pt; }
+  #nav a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  #nav a:hover {
+    color: #0ff; }
+
+#main #home {
+  background-color: #ccc;
+  width: 100%;
+  height: 100%; }
+  #main #home .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: url("../img/banner.jpg") center no-repeat;
+    color: #fff; }
+    #main #home .cover h1 {
+      font-weight: 900;
+      margin-bottom: 40px; }
+    #main #home .cover p {
+      font-weight: 500;
+      margin-bottom: 40px;
+      word-wrap: break-all; }
+    #main #home .cover a {
+      border: solid 1px #000;
+      color: #000;
+      opacity: 0.7; }
+
+#main .title {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  font-size: 20pt;
+  font-weight: bold; }
+
+#main #product, #main #experiment, #main #about, #main #QA {
+  padding-top: 100px;
+  display: none; }
+
+#main #footer {
+  display: none; }
+
+#main #product .container, #main #experiment .container {
+  width: 100%; }
+  #main #product .container .row, #main #experiment .container .row {
+    padding: 10px 0;
+    margin: 0; }
+  #main #product .container .col-md-3, #main #product .container .col-6, #main #experiment .container .col-md-3, #main #experiment .container .col-6 {
+    padding: 0;
+    border-bottom: solid 5px #eee; }
+    #main #product .container .col-md-3 p, #main #product .container .col-6 p, #main #experiment .container .col-md-3 p, #main #experiment .container .col-6 p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+    #main #product .container .col-md-3 img, #main #product .container .col-6 img, #main #experiment .container .col-md-3 img, #main #experiment .container .col-6 img {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto; }
+
+#main #experiment #name {
+  border-bottom: none;
+  padding: 20px 0 0 0; }
+
+#main #about {
+  line-height: 30pt; }
+  #main #about .content {
+    padding: 0 10%; }
+  #main #about .row {
+    border: solid 1px #aaa;
+    margin: 20px 0; }
+    #main #about .row h5 {
+      font-weight: bold; }
+    #main #about .row p {
+      font-size: 11pt; }
+    #main #about .row img {
+      display: block;
+      margin: 0 auto; }
+
+#main #QA .content {
+  padding: 0 10%; }
+  #main #QA .content ul {
+    list-style-type: none; }
+    #main #QA .content ul li {
+      border-bottom: solid 1px #000; }
+      #main #QA .content ul li .quest {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 15px; }
+        #main #QA .content ul li .quest a {
+          text-decoration: none;
+          color: #000; }
+        #main #QA .content ul li .quest a:hover, #main #QA .content ul li .quest a:focus {
+          color: #00f; }
+      #main #QA .content ul li .answer {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-left: 10px; }
+        #main #QA .content ul li .answer .card {
+          margin-bottom: 10px;
+          background-color: #ddd;
+          border: solid 1px #888; }
+        #main #QA .content ul li .answer .ans_title {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          margin: 0;
+          padding: 0; }
+        #main #QA .content ul li .answer .ans {
+          width: 100%;
+          height: auto;
+          line-height: 30px;
+          padding: 0px 35px; }
+
+#main #footer {
+  width: 100%; }
+  #main #footer .content {
+    margin: 0;
+    padding: 50px 10%;
+    background-color: #ccc;
+    line-height: 25pt; }
+    #main #footer .content h4 {
+      font-weight: bold; }
+    #main #footer .content .pics img {
+      max-width: 150px;
+      height: 100px;
+      display: block;
+      margin: 0 auto; }
+  #main #footer .end {
+    margin: 0;
+    padding: 10px;
+    background-color: #fff; }
+    #main #footer .end p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }

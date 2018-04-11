@@ -1,0 +1,173 @@
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin img_center
+  display: block
+  margin: 0 auto
+
+html,body,#mypage,#nav,#home
+  +size(100%)
+  margin: 0
+  padding: 0
+  font-family: "微軟正黑體"
+  background-color: #ddd
+#nav
+  display: none
+  height: 0
+  .sitename
+    font-size: 25pt
+  a
+    color: #fff
+    +center
+  a:hover
+    color: #0ff
+
+#main
+  #home
+    background-color: #ccc
+    +size(100%)
+    
+    .cover
+      +center
+      +size(100%)
+      background: url('../img/banner.jpg') center no-repeat 
+      color: #fff
+
+      h1
+        font-weight: 900
+        margin-bottom: 40px
+      p 
+        font-weight: 500
+        margin-bottom: 40px
+        word-wrap: break-all
+      a
+        border: solid 1px #000
+        color: #000
+        opacity: 0.7
+
+  .title
+    +size(100%,40px)
+    +center
+    background-color: #fff
+    font-size: 20pt
+    font-weight: bold
+
+  #product,#experiment,#about,#QA
+    padding-top: 100px
+    display: none
+  #footer
+    display: none
+
+  #product,#experiment
+    .container
+      width: 100%
+      .row
+        padding: 10px 0
+        margin: 0
+      .col-md-3,.col-6
+        padding: 0
+        border-bottom: solid 5px #eee
+        p
+          +center
+        img
+          +size(200px)
+          +img_center
+
+  #experiment
+    #name
+      border-bottom: none
+      padding: 20px 0 0 0
+      
+  #about
+    line-height: 30pt
+    .content
+      padding: 0 10%
+    .row
+      border: solid 1px #aaa
+      margin: 20px 0
+      h5
+        font-weight: bold
+      p
+        font-size: 11pt
+      img
+        +img_center
+
+  #QA
+    .content
+      padding: 0 10%
+      ul
+        list-style-type: none
+        li
+          border-bottom: solid 1px #000
+
+          .quest
+            width: 100%
+            height: auto
+            overflow: hidden
+            padding: 15px
+
+            a
+              text-decoration: none
+              color: #000
+            a:hover,a:focus
+              color: #00f
+
+          .answer
+            width: 100%
+            height: auto
+            position: relative
+            padding-left: 10px
+
+            .card
+              margin-bottom: 10px
+              background-color: #ddd
+              border: solid 1px #888
+          
+            .ans_title
+              position: absolute
+              top: 20px
+              left: 20px
+              margin: 0
+              padding: 0
+            .ans
+              width: 100%
+              height: auto
+              line-height: 30px
+              padding: 0px 35px
+
+  #footer
+    width: 100%
+    .content
+      margin: 0
+      padding: 50px 10%
+      background-color: #ccc
+      line-height: 25pt
+      h4
+        font-weight: bold
+
+      .pics
+        img
+          max-width: 150px
+          height: 100px
+          +img_center
+          
+    .end
+      margin: 0
+      padding: 10px
+      background-color: #fff
+      p
+        +center
+        
+
+
+    
+
+    
+      
