@@ -12,7 +12,7 @@
   display: block
   margin: 0 auto
 
-html,body,#mypage,#nav,#main
+html,body,#mypage,#main
   +size(100%)
   margin: 0
   padding: 0
@@ -20,7 +20,6 @@ html,body,#mypage,#nav,#main
   background-color: #ddd
 #nav
   display: none
-  height: 0
   .sitename
     font-size: 25pt
   a
@@ -37,7 +36,7 @@ html,body,#mypage,#nav,#main
       +center
       +size(100%)
       background: url('../img/cover.jpg') center no-repeat 
-      background-size: 100%
+      background-size: hover
       color: #fff
 
       h1
@@ -88,7 +87,7 @@ html,body,#mypage,#nav,#main
             +size(160px)
             +img_center
           img:hover
-            +size(180px)
+            background-color: #636387
           .card-img-top
             padding: 10px
             
@@ -182,7 +181,7 @@ html,body,#mypage,#nav,#main
           background-color: #ccc
           border: 0
           img
-            +size(80px)
+            +size(50px)
             +img_center
           
     .end
