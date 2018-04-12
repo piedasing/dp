@@ -12,7 +12,7 @@
   display: block
   margin: 0 auto
 
-html,body,#mypage,#nav,#home
+html,body,#mypage,#nav,#main
   +size(100%)
   margin: 0
   padding: 0
@@ -32,12 +32,12 @@ html,body,#mypage,#nav,#home
 #main
   #home
     background-color: #ccc
-    +size(100%)
     
     .cover
       +center
       +size(100%)
-      background: url('../img/banner.jpg') center no-repeat 
+      background: url('../img/cover.jpg') center no-repeat 
+      background-size: 100%
       color: #fff
 
       h1
@@ -69,21 +69,46 @@ html,body,#mypage,#nav,#home
     .container
       width: 100%
       .row
-        padding: 10px 0
+        padding: 0px 0
         margin: 0
       .col-md-3,.col-6
         padding: 0
-        border-bottom: solid 5px #eee
-        p
-          +center
+        border-bottom: solid 10px #eee
+        
+        .card
+          background-color: #ddd
+          border: solid 1px #888
+          height: 250px
+          a
+            text-decoration: none
+            color: #000
+          a:hover
+            color: #08a
+          img
+            +size(160px)
+            +img_center
+          img:hover
+            +size(180px)
+          .card-img-top
+            padding: 10px
+            
+          .card-body
+            border-top: solid 1px #888
+            p
+              +center
+    .modal-dialog
+      .modal-header
+        background-color: #eee
+        border-bottom: solid 1px #777
+      .modal-body  
+        border-bottom: solid 1px #777
         img
           +size(200px)
           +img_center
+        p
+          +center
+            
 
-  #experiment
-    #name
-      border-bottom: none
-      padding: 20px 0 0 0
       
   #about
     line-height: 30pt
@@ -153,14 +178,16 @@ html,body,#mypage,#nav,#home
         font-weight: bold
 
       .pics
-        img
-          max-width: 150px
-          height: 100px
-          +img_center
+        .card
+          background-color: #ccc
+          border: 0
+          img
+            +size(80px)
+            +img_center
           
     .end
       margin: 0
-      padding: 10px
+      padding: 0
       background-color: #fff
       p
         +center

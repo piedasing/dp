@@ -15,37 +15,35 @@ function home(){
   $("#footer").css("display","none")
 }
 
-function product(){
-  $("#product").css("display","block")
-  $("#experiment").css("display","none")
-  $("#about").css("display","none")
+function fn(i){
   $("#footer").css("display","block")
   $("#home").css("display","none")
-}
+ 
+  switch(i){
+    case 0:
+      $("#product").css("display","block")
+      $("#experiment").css("display","none")
+      $("#about").css("display","none")
+      $("#QA").css("display","none")
+      break
+    case 1:
+      $("#product").css("display","none")
+      $("#experiment").css("display","block")
+      $("#about").css("display","none")
+      $("#QA").css("display","none")
+      break
+    case 2:
+      $("#product").css("display","none")
+      $("#experiment").css("display","none")
+      $("#about").css("display","block")
+      $("#QA").css("display","none")
+      break
+    case 3:
+      $("#product").css("display","none")
+      $("#experiment").css("display","none")
+      $("#about").css("display","none")
+      $("#QA").css("display","block")
+      break
 
-function experiment(){
-  $("#product").css("display","none")
-  $("#experiment").css("display","block")
-  $("#about").css("display","none")
-  $("#QA").css("display","none")
-  $("#footer").css("display","block")
-  $("#home").css("display","none")
-}
-
-function about(){
-  $("#product").css("display","none")
-  $("#experiment").css("display","none")
-  $("#about").css("display","block")
-  $("#QA").css("display","none")
-  $("#footer").css("display","block")
-  $("#home").css("display","none")
-}
-
-function qa(){
-  $("#product").css("display","none")
-  $("#experiment").css("display","none")
-  $("#about").css("display","none")
-  $("#QA").css("display","block")
-  $("#footer").css("display","block")
-  $("#home").css("display","none")
+  }
 }

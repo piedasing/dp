@@ -2,6 +2,8 @@ html
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="shortcut icon" href="./img/icon/icon.png")
+
     //font-awesome 5.0.8
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous")
     //bootstrap 4.0.0
@@ -24,13 +26,13 @@ html
           .collapse.navbar-collapse#navlist.bg-dark
             ul.navbar-nav.mr-auto
               li.nav-item
-                a(href="#product" onclick="product()").nav-link.active 產品
+                a(href="#product" onclick="fn(0)").nav-link.active 產品
               li.nav-item 
-                a(href="#experiment" onclick="experiment()").nav-link 實驗室
+                a(href="#experiment" onclick="fn(1)").nav-link 實驗室
               li.nav-item
-                a(href="#about" onclick="about()").nav-link 關於DP
+                a(href="#about" onclick="fn(2)").nav-link 關於DP
               li.nav-item
-                a(href="#QA" onclick="qa()").nav-link Q&A
+                a(href="#QA" onclick="fn(3)").nav-link Q&A
 
           
       #main
@@ -47,32 +49,80 @@ html
           .container
             .row
               .col-md-3.col-6
-                a(href="#" data-toggle="modal" data-target="#pic1")
-                  img(src="./img/product/01.jpg")
+                .card
+                  a(href="#" data-toggle="modal" data-target="#pic1")
+                    img(src="./img/product/01.jpg").card-img-top
+                    .card-body
+                      .card-title
+                        p pic01
               .col-md-3.col-6
-                img(src="./img/product/02.jpg")
+                .card
+                  img(src="./img/product/02.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic02
               .col-md-3.col-6
-                img(src="./img/product/03.jpg")
+                .card
+                  img(src="./img/product/03.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic03
               .col-md-3.col-6
-                img(src="./img/product/04.jpg")
+                .card
+                  img(src="./img/product/04.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic04
             .row
               .col-md-3.col-6
-                img(src="./img/product/05.jpg")
+                .card
+                  img(src="./img/product/05.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic05
               .col-md-3.col-6
-                img(src="./img/product/06.jpg")
+                .card
+                  img(src="./img/product/06.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic06
               .col-md-3.col-6
-                img(src="./img/product/07.jpg")
+                .card
+                  img(src="./img/product/07.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic07
               .col-md-3.col-6
-                img(src="./img/product/08.jpg")
+                .card
+                  img(src="./img/product/08.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic08
             .row
               .col-md-3.col-6
-                img(src="./img/product/09.jpg")
+                .card
+                  img(src="./img/product/09.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic09
               .col-md-3.col-6
-                img(src="./img/product/10.jpg")
+                .card
+                  img(src="./img/product/10.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic10
               .col-md-3.col-6
-                img(src="./img/product/11.jpg")
+                .card
+                  img(src="./img/product/11.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic11
               .col-md-3.col-6
-                img(src="./img/product/12.jpg")
+                .card
+                  img(src="./img/product/12.jpg").card-img-top
+                  .card-body
+                    .card-title
+                      p pic12
 
           #pic1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="pic1Label" aria-hidden="true")
             .modal-dialog(role="document")
@@ -80,7 +130,8 @@ html
                 .modal-header
                   h5.modal-title#pic1Label pic1
                 .modal-body
-                  p 123
+                  img(src="./img/product/01.jpg")
+                  p pic01
                 .modal-footer
                   button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
         
@@ -89,66 +140,128 @@ html
           .container               
             .row
               .col-md-3.col-6
-                p 冷啟動模擬器
-                img(src="./img/experiment/01-s.jpg" alt="")
+                .card
+                  img(src="./img/experiment/01-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 冷啟動模擬器
+                  
               .col-md-3.col-6
-                p 高溫高剪切測定儀
-                img(src="./img/experiment/02-s.jpg" alt="")
-              .col-md-3.col-6
-                p 消泡測試儀
-                img(src="./img/experiment/03-s.jpg" alt="")
-              .col-md-3.col-6
-                p 低溫流動測定儀
-                img(src="./img/experiment/04-s.jpg" alt="")
-            .row
-              .col-md-3.col-6
-                p MINI-ROTARY VISCOMETER
-                img(src="./img/experiment/05-s.jpg" alt="")
-              .col-md-3.col-6
-                p 自動黏度測定儀
-                img(src="./img/experiment/06-s.jpg" alt="")
-              .col-md-3.col-6
-                p 閉杯式閃火點測定儀
-                img(src="./img/experiment/07-s.jpg" alt="")
-              .col-md-3.col-6
-                p 開杯式閃火點測定儀
-                img(src="./img/experiment/08-s.jpg" alt="")
-            .row
-              .col-md-3.col-6
-                p TAN、TBN 酸價、鹼價測
-                img(src="./img/experiment/09-s.jpg" alt="")
-              .col-md-3.col-6
-                p 銅板腐蝕測試儀
-                img(src="./img/experiment/10-s.jpg" alt="")
-              .col-md-3.col-6
-                p 色相分析儀
-                img(src="./img/experiment/11-s.jpg" alt="")
-              .col-md-3.col-6
-                p 831 KF Coulometer 庫倫式水分測定
-                img(src="./img/experiment/12-s.jpg" alt="")
-            .row
-              .col-md-3.col-6
-                p 乳化測定儀
-                img(src="./img/experiment/13-s.jpg" alt="")
-              .col-md-3.col-6
-                p 傅立葉紅外線光譜儀
-                img(src="./img/experiment/14-s.jpg" alt="")
-              .col-md-3.col-6
-                p 潤滑脂錐入度測定儀
-                img(src="./img/experiment/15-s.jpg" alt="")
-              .col-md-3.col-6
-                p 寬潤滑脂溫度範圍滴定測定儀
-                img(src="./img/experiment/16-s.jpg" alt="")
-            .row
-              .col-md-3.col-6
-                p XRF光譜
-                img(src="./img/experiment/17-s.jpg" alt="")
-              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/02-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 高溫高剪切測定儀
                 
               .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/03-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 消泡測試儀
                 
               .col-md-3.col-6
-
+                .card
+                  img(src="./img/experiment/04-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 低溫流動測定儀
+                
+            .row
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/05-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p MINI-ROTARY VISCOMETER
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/06-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 自動黏度測定儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/07-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 閉杯式閃火點測定儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/08-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 開杯式閃火點測定儀
+                
+            .row
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/09-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p TAN、TBN 酸價、鹼價測
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/10-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 銅板腐蝕測試儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/11-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 色相分析儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/12-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 831KF Coulometer 庫倫式水分測定
+                
+            .row
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/13-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 乳化測定儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/14-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 傅立葉紅外線光譜儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/15-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 潤滑脂錐入度測定儀
+                
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/16-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p 寬潤滑脂溫度範圍滴定測定儀
+               
+            .row
+              .col-md-3.col-6
+                .card
+                  img(src="./img/experiment/17-s.jpg" alt="").card-img-top
+                  .card-body
+                    .card-title
+                      p XRF光譜
+ 
         
         #about
           h1.title 關於DP
@@ -209,13 +322,17 @@ html
               h4 Get in Touch
               .row.pics
                 .col-6.col-md-3
-                  img(src="./img/footer/01.jpg" alt="")
+                  .card
+                    img(src="./img/footer/01.jpg" alt="").card-img-top
                 .col-6.col-md-3
-                  img(src="./img/footer/02.png" alt="")
+                  .card
+                    img(src="./img/footer/02.png" alt="").card-img-top
                 .col-6.col-md-3
-                  img(src="./img/footer/03.png" alt="")
+                  .card
+                    img(src="./img/footer/03.png" alt="").card-img-top
                 .col-6.col-md-3
-                  img(src="./img/footer/04.png" alt="")
+                  .card
+                    img(src="./img/footer/04.png" alt="").card-img-top
           .end.row
             .col-12
               p 2018.4

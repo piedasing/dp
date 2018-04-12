@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="./img/icon/icon.png"/>
     <!--font-awesome 5.0.8-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"/>
     <!--bootstrap 4.0.0-->
@@ -21,10 +22,10 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlist" aria-controls="navlist" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse bg-dark" id="navlist">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item"><a class="nav-link active" href="#product" onclick="product()">產品</a></li>
-              <li class="nav-item"> <a class="nav-link" href="#experiment" onclick="experiment()">實驗室</a></li>
-              <li class="nav-item"><a class="nav-link" href="#about" onclick="about()">關於DP</a></li>
-              <li class="nav-item"><a class="nav-link" href="#QA" onclick="qa()">Q&A</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#product" onclick="fn(0)">產品</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#experiment" onclick="fn(1)">實驗室</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about" onclick="fn(2)">關於DP</a></li>
+              <li class="nav-item"><a class="nav-link" href="#QA" onclick="fn(3)">Q&A</a></li>
             </ul>
           </div>
         </nav>
@@ -41,22 +42,117 @@
           <h1 class="title">產品</h1>
           <div class="container">
             <div class="row">
-              <div class="col-md-3 col-6"><a href="#" data-toggle="modal" data-target="#pic1"><img src="./img/product/01.jpg"/></a></div>
-              <div class="col-md-3 col-6"><img src="./img/product/02.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/03.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/04.jpg"/></div>
+              <div class="col-md-3 col-6">
+                <div class="card"><a href="#" data-toggle="modal" data-target="#pic1"><img class="card-img-top" src="./img/product/01.jpg"/>
+                    <div class="card-body">
+                      <div class="card-title">
+                        <p>pic01</p>
+                      </div>
+                    </div></a></div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/02.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic02</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/03.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic03</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/04.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic04</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="row">
-              <div class="col-md-3 col-6"><img src="./img/product/05.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/06.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/07.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/08.jpg"/></div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/05.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic05</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/06.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic06</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/07.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic07</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/08.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic08</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="row">
-              <div class="col-md-3 col-6"><img src="./img/product/09.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/10.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/11.jpg"/></div>
-              <div class="col-md-3 col-6"><img src="./img/product/12.jpg"/></div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/09.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic09</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/10.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic10</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/11.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic11</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="card"><img class="card-img-top" src="./img/product/12.jpg"/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>pic12</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="modal fade" id="pic1" tabindex="-1" role="dialog" aria-labelledby="pic1Label" aria-hidden="true">
@@ -65,8 +161,8 @@
                 <div class="modal-header">
                   <h5 class="modal-title" id="pic1Label">pic1</h5>
                 </div>
-                <div class="modal-body">
-                  <p>123</p>
+                <div class="modal-body"><img src="./img/product/01.jpg"/>
+                  <p>pic01</p>
                 </div>
                 <div class="modal-footer">
                   <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
@@ -80,67 +176,166 @@
           <div class="container">              
             <div class="row">
               <div class="col-md-3 col-6">
-                <p>冷啟動模擬器</p><img src="./img/experiment/01-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/01-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>冷啟動模擬器</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>高溫高剪切測定儀</p><img src="./img/experiment/02-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/02-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>高溫高剪切測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>消泡測試儀</p><img src="./img/experiment/03-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/03-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>消泡測試儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>低溫流動測定儀</p><img src="./img/experiment/04-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/04-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>低溫流動測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 col-6">
-                <p>MINI-ROTARY VISCOMETER</p><img src="./img/experiment/05-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/05-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>MINI-ROTARY VISCOMETER</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>自動黏度測定儀</p><img src="./img/experiment/06-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/06-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>自動黏度測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>閉杯式閃火點測定儀</p><img src="./img/experiment/07-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/07-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>閉杯式閃火點測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>開杯式閃火點測定儀</p><img src="./img/experiment/08-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/08-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>開杯式閃火點測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 col-6">
-                <p>TAN、TBN 酸價、鹼價測</p><img src="./img/experiment/09-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/09-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>TAN、TBN 酸價、鹼價測</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>銅板腐蝕測試儀</p><img src="./img/experiment/10-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/10-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>銅板腐蝕測試儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>色相分析儀</p><img src="./img/experiment/11-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/11-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>色相分析儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>831 KF Coulometer 庫倫式水分測定</p><img src="./img/experiment/12-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/12-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>831KF Coulometer 庫倫式水分測定</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 col-6">
-                <p>乳化測定儀</p><img src="./img/experiment/13-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/13-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>乳化測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>傅立葉紅外線光譜儀</p><img src="./img/experiment/14-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/14-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>傅立葉紅外線光譜儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>潤滑脂錐入度測定儀</p><img src="./img/experiment/15-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/15-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>潤滑脂錐入度測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 col-6">
-                <p>寬潤滑脂溫度範圍滴定測定儀</p><img src="./img/experiment/16-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/16-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>寬潤滑脂溫度範圍滴定測定儀</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 col-6">
-                <p>XRF光譜</p><img src="./img/experiment/17-s.jpg" alt=""/>
+                <div class="card"><img class="card-img-top" src="./img/experiment/17-s.jpg" alt=""/>
+                  <div class="card-body">
+                    <div class="card-title">
+                      <p>XRF光譜</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-3 col-6"></div>
-              <div class="col-md-3 col-6"></div>
-              <div class="col-md-3 col-6"></div>
             </div>
           </div>
         </div>
@@ -212,10 +407,18 @@
             <div class="col-6">
               <h4>Get in Touch</h4>
               <div class="row pics">
-                <div class="col-6 col-md-3"><img src="./img/footer/01.jpg" alt=""/></div>
-                <div class="col-6 col-md-3"><img src="./img/footer/02.png" alt=""/></div>
-                <div class="col-6 col-md-3"><img src="./img/footer/03.png" alt=""/></div>
-                <div class="col-6 col-md-3"><img src="./img/footer/04.png" alt=""/></div>
+                <div class="col-6 col-md-3">
+                  <div class="card"><img class="card-img-top" src="./img/footer/01.jpg" alt=""/></div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card"><img class="card-img-top" src="./img/footer/02.png" alt=""/></div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card"><img class="card-img-top" src="./img/footer/03.png" alt=""/></div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="card"><img class="card-img-top" src="./img/footer/04.png" alt=""/></div>
+                </div>
               </div>
             </div>
           </div>
