@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html, body, #mypage, #main {
+html, body, #main {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -177,15 +177,24 @@ html, body, #mypage, #main {
     background-color: #ccc;
     line-height: 25pt; }
     #main #footer .content h4 {
-      font-weight: bold; }
-    #main #footer .content .pics .card {
-      background-color: #ccc;
-      border: 0; }
-      #main #footer .content .pics .card img {
-        width: 50px;
-        height: 50px;
-        display: block;
-        margin: 0 auto; }
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+    #main #footer .content .touch, #main #footer .content .contact {
+      margin-bottom: 40px; }
+      #main #footer .content .touch .pics .card, #main #footer .content .contact .pics .card {
+        background-color: #ccc;
+        border: 0; }
+        #main #footer .content .touch .pics .card img, #main #footer .content .contact .pics .card img {
+          width: 70px;
+          height: 70px;
+          display: block;
+          margin: 0 auto; }
+    #main #footer .content .contact p {
+      padding-left: 30px; }
   #main #footer .end {
     margin: 0;
     padding: 0;

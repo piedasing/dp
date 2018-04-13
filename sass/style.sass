@@ -12,7 +12,7 @@
   display: block
   margin: 0 auto
 
-html,body,#mypage,#main
+html,body,#main
   +size(100%)
   margin: 0
   padding: 0
@@ -21,13 +21,10 @@ html,body,#mypage,#main
 
 #nav
   display: none
-  
   .sitename
     font-size: 25pt
-
   .fa-bars
     color: #fff
-
   a
     color: #fff
     +center
@@ -37,14 +34,12 @@ html,body,#mypage,#main
 #main
   #home
     background-color: #ccc
-    
     .cover
       +center
       +size(100%)
       background: url('../img/cover.jpg') center no-repeat 
       background-size: cover
       color: #fff      
-      
       h1
         font-weight: 900
         margin-bottom: 40px
@@ -80,7 +75,6 @@ html,body,#mypage,#main
       .col-md-3,.col-6
         padding: 0
         border-bottom: solid 10px #eee
-        
         .card
           background-color: #ddd
           border: solid 1px #888
@@ -98,7 +92,6 @@ html,body,#mypage,#main
             transition: 0.3s
           .card-img-top
             padding: 10px
-            
           .card-body
             border-top: solid 1px #888
             p
@@ -115,8 +108,6 @@ html,body,#mypage,#main
         p
           +center
             
-
-      
   #about
     line-height: 30pt
     .content
@@ -138,30 +129,25 @@ html,body,#mypage,#main
         list-style-type: none
         li
           border-bottom: solid 1px #000
-
           .quest
             width: 100%
             height: auto
             overflow: hidden
             padding: 15px
-
             a
               text-decoration: none
               color: #000
             a:hover,a:focus
               color: #00f
-
           .answer
             width: 100%
             height: auto
             position: relative
             padding-left: 10px
-
             .card
               margin-bottom: 10px
               background-color: #ddd
               border: solid 1px #888
-          
             .ans_title
               position: absolute
               top: 20px
@@ -183,14 +169,20 @@ html,body,#mypage,#main
       line-height: 25pt
       h4
         font-weight: bold
-
-      .pics
-        .card
-          background-color: #ccc
-          border: 0
-          img
-            +size(50px)
-            +img_center
+        margin-bottom: 20px
+        +center
+      .touch,.contact
+        margin-bottom: 40px
+        .pics
+          .card
+            background-color: #ccc
+            border: 0
+            img
+              +size(70px)
+              +img_center
+      .contact
+        p
+          padding-left: 30px
           
     .end
       margin: 0
