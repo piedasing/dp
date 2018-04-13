@@ -11,6 +11,8 @@ html, body, #mypage, #main {
   display: none; }
   #nav .sitename {
     font-size: 25pt; }
+  #nav .fa-bars {
+    color: #fff; }
   #nav a {
     color: #fff;
     display: flex;
@@ -38,7 +40,8 @@ html, body, #mypage, #main {
     #main #home .cover p {
       font-weight: 500;
       margin-bottom: 40px;
-      word-wrap: break-all; }
+      word-wrap: break-all;
+      padding: 0 50px; }
     #main #home .cover a {
       border: solid 1px #000;
       color: #000;
@@ -85,7 +88,8 @@ html, body, #mypage, #main {
         display: block;
         margin: 0 auto; }
       #main #product .container .col-md-3 .card img:hover, #main #product .container .col-6 .card img:hover, #main #experiment .container .col-md-3 .card img:hover, #main #experiment .container .col-6 .card img:hover {
-        transform: translateX(10px) translateY(-10px); }
+        transform: translateY(-10px);
+        transition: 0.3s; }
       #main #product .container .col-md-3 .card .card-img-top, #main #product .container .col-6 .card .card-img-top, #main #experiment .container .col-md-3 .card .card-img-top, #main #experiment .container .col-6 .card .card-img-top {
         padding: 10px; }
       #main #product .container .col-md-3 .card .card-body, #main #product .container .col-6 .card .card-body, #main #experiment .container .col-md-3 .card .card-body, #main #experiment .container .col-6 .card .card-body {
