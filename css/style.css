@@ -173,7 +173,7 @@ html, body, #main {
   width: 100%; }
   #main #footer .content {
     margin: 0;
-    padding: 50px 10%;
+    padding: 50px 5%;
     background-color: #ccc;
     line-height: 25pt; }
     #main #footer .content h4 {
@@ -194,11 +194,18 @@ html, body, #main {
           display: block;
           margin: 0 auto; }
     #main #footer .content .contact p {
+      text-align: center;
       padding-left: 30px; }
   #main #footer .end {
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #fff; }
+    #main #footer .end .row{
+      margin: 0;
+      padding: 0;
+    }
+
     #main #footer .end p {
       display: flex;
       align-items: center;
