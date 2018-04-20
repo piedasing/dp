@@ -31,21 +31,22 @@ html, body, #main {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background: url("../img/cover.jpg") center no-repeat;
+    background: url("../img/cover1.png") center no-repeat;
     background-size: cover;
-    color: #fff; }
+    color: #000;
+    padding-top: 20vh; }
     #main #home .cover h1 {
       font-weight: 900;
       margin-bottom: 40px; }
     #main #home .cover p {
-      font-weight: 500;
+      font-weight: 400;
       margin-bottom: 40px;
       word-wrap: break-all;
       padding: 0 50px; }
     #main #home .cover a {
-      border: solid 1px #000;
+      border: solid 1px #777;
       color: #000;
-      opacity: 0.7; }
+      opacity: 0.8; }
 
 #main .title {
   width: 100%;
@@ -194,19 +195,21 @@ html, body, #main {
           display: block;
           margin: 0 auto; }
     #main #footer .content .contact p {
-      text-align: center;
-      padding-left: 30px; }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+    #main #footer .content .contact img {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      margin-left: 20px; }
   #main #footer .end {
-    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #fff; }
-    #main #footer .end .row{
-      margin: 0;
-      padding: 0;
-    }
-
-    #main #footer .end p {
+    #main #footer .end a {
       display: flex;
       align-items: center;
       justify-content: center;

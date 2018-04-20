@@ -13,20 +13,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--css-->
     <link rel="stylesheet" href="./css/style.css"/>
-    <!--js-->
-    <script src="./js/index.js"></script>
+    <!--vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>DPMotorOil</title>
   </head>
   <body>
     <div class="container" id="nav">
-      <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top"><a class="navbar-brand sitename" href="#home" onClick="home()">DPMotorOil</a>
+      <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top"><a class="navbar-brand sitename" href="#home" onclick="home()">DPMotorOil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlist" aria-controls="navlist" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse bg-dark" id="navlist">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link active" href="#product" onClick="fn(0)">產品</a></li>
-            <li class="nav-item"> <a class="nav-link" href="#experiment" onClick="fn(1)">實驗室</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about" onClick="fn(2)">關於DP</a></li>
-            <li class="nav-item"><a class="nav-link" href="#QA" onClick="fn(3)">Q&A</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#product" onclick="fn(0)">產品</a></li>
+            <li class="nav-item"> <a class="nav-link" href="#experiment" onclick="fn(1)">實驗室</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" onclick="fn(2)">關於DP</a></li>
+            <li class="nav-item"><a class="nav-link" href="#QA" onclick="fn(3)">Q&A</a></li>
           </ul>
         </div>
       </nav>
@@ -36,310 +36,29 @@
         <div class="cover">
           <h1 class="display-4">DP專業機油</h1>
           <p class="lead">主打國際技術台灣在地研發、製造、包裝和品管統在地統一管理並接受客戶需求研發各種油化保養產品。</p>
-          <p class="lead">讓每一個消費者能真正使用到符合自己的好產品。            </p><a class="btn btn-light" href="#product" onClick="start()">Continue</a>
+          <p class="lead">讓每一個消費者能真正使用到符合自己的好產品。            </p><a class="btn btn-light" href="#product" onclick="start()">Continue</a>
         </div>
       </div>
-      <div id="product">
-        <h1 class="title">產品</h1>
-  
-
-       
-        <div class="container">
-          <div class="row">
-          
-             <iframe width=100% height="315" src="https://www.youtube.com/embed/pMyr4Cy0-No?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        
-            <div class="col-md-3 col-6">
-              <div class="card"><a href="#" data-toggle="modal" data-target="#pic1"><img class="card-img-top" src="./img/product/01.png"/>
-                  <div class="card-body">
-                    <div class="card-title">
-                      <p>pic01</p>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/product/01.png"/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>即將上市</p>
-                  </div>
+      <div id="app">
+        <div id="product">
+          <h1 class="title">產品</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-6" v-if="card.id == 'product'" v-for="card in cards">
+                <div class="card">
+                  <card :card_data="card"></card>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="pic1" tabindex="-1" role="dialog" aria-labelledby="pic1Label" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="pic1Label">pic1</h5>
-              </div>
-              <div class="modal-body"><img src="./img/product/01.jpg"/>
-                <p>pic01</p>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="experiment">
-        <h1 class="title">實驗室介紹</h1>
-        <div class="container">              
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/01-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>冷啟動模擬器  </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/02-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>高溫高剪切測定儀     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/03-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>消泡測試儀   </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/04-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>低溫流動測定儀    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/05-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>MINI-ROTARY VISCOMETER    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/06-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>自動黏度測定儀 </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/07-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>閉杯式閃火點測定儀              </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/08-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>開杯式閃火點測定儀              </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/09-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>TAN、TBN 酸價、鹼價測   </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/10-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>銅板腐蝕測試儀          </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/11-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>色相分析儀              </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/12-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>831KF Coulometer 庫倫式水分測定   </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/13-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>乳化測定儀  </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/14-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>傅立葉紅外線光譜儀</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/15-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>潤滑脂錐入度測定儀              </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/16-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>寬潤滑脂溫度範圍滴定測定儀             </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-6">
-              <div class="card"><img class="card-img-top" src="./img/experiment/17-s.jpg" alt=""/>
-                <div class="card-body">
-                  <div class="card-title">
-                    <p>XRF光譜</p>
-                  </div>
+        <div id="experiment">
+          <h1 class="title">實驗室介紹</h1>
+          <div class="container">
+            <div class="row">
+              <div class="co-md-3 col-6" v-if="card.id == 'experiment'" v-for="card in cards">
+                <div class="card">
+                  <card :card_data="card"></card>
                 </div>
               </div>
             </div>
@@ -351,11 +70,7 @@
         <div class="content">
           <h2>DP機油核心價值</h2>
           <h5>DP機油的優勢</h5>
-          <p>別人進口機油,我們進口技術,別人派送專員勘查進口商,我們派送技術員與國際大廠研發技術,別人進口的是產品,我們去交流的是技術,擁有國際的技術,進口國際原料大廠,在地製造生產,過程全程監督,別人可以抽查前做足準備,我們永遠都在監督下做足品質。
-          <br>我們的主要優勢包括技術的開發和完整產線，允許我們提供個人化開發項目，創造出與別人不同的價值。</p>
-		  <h2>DP推陳出新</h2>
-          <p>DP機油擁有最好的研發和創新技術的能力，透過不斷提高產品效能與品質的信念，是品牌發展與公司不斷突破的保證。
-DP專業機油團隊的專業水準與國際標準看齊。專注發展和嚴以律己的精神，成就品牌的不同凡響。</p>
+          <p>別人進口機油,我們進口技術,別人派送專員勘查進口商,我們派送技術員與國際大廠研發技術,別人進口的是產品,我們去交流的是技術,擁有國際的技術,進口國際原料大廠,在地製造生產,過程全程監督,別人可以抽查前做足準備,我們永遠都在監督下做足品質。</p>
           <h2>DP機油核心價值</h2>
           <h5>TECHNOLOGY</h5>
           <p>我們使用國內外最尖端的技術，DP機油持續挑戰並精進自身技術並保值最佳品質。我們認為在任何一個市場的顧客，都能得到最好的照顧。我們用原物料為我們自身把關和挑選創造高品質的產品，在這方面的品質DP機油絕不模糊。DP機油產品性能，比市場上任何產品更好。</p>
@@ -364,19 +79,17 @@ DP專業機油團隊的專業水準與國際標準看齊。專注發展和嚴以
           <h5>COMMITMENT</h5>
           <p>DP機油團隊的專業水準鱌國際標準看齊，專注研發和嚴格律己的態度，造就品牌的不同凡響。<br>我們使用國內外最尖端的技術，DP機油持續挑戰並精進自身技術並保值最佳品質。我們認為在任何一個市場的顧客，都能得到最好的照顧。<br>我們用原物料為我們自身把關和挑選創造高品質的產品，在這方面的品質DP機油絕不懈怠。DP機油產品性能夠比市場上任何產品更好。</p>
           <h2>DP所做的</h2>
-          <p>DP機油是與台灣在地製造商合作的網路行銷公司，以解決客戶需求為最優先。<br>我們所做的 我們擁有國際的技術，在地的產線，從研發、量產、品管、包裝到出貨，完整的程序，來達到最高品質以及嚴格品管的最高原則，由網路行銷減少實體店面中被剝奪的利潤以及不必要的成本，給顧客最直接的價格。<br>我們的戰略 我們的戰略是通過在網路行銷，減少成本來達到與實體店家競爭，擁有相對便宜的價格卻又有高品質的商品當作我們的優勢，與許多進口盤商做競爭。<br>我們的策略 我們策略的實施建立在擁有在地製造商作為依靠，在技術與品管上面都能與國際品牌做抗衡，成就台灣製造不輸國際品牌之能力。<br>我們的優勢 我們的主要優勢包括技術的開發和完整產線，允許我們提供個人化開發項目，創造出與別人不同的價值。.</p>
+          <p>DP機油是與台灣在地製造商合作的網路行銷公司，以解決客戶需求為最優先。<br>我們所做的 我們擁有國際的技術，在地的產線，從研發、量產、品管、包裝到出貨，完整的流水線安排，進而達到品質穩定品管優良的最高原則，由網路行銷減少實體店面中被剝奪的利潤以及人事、店面等不必要的成本，給顧客最直接的價格。<br>我們的戰略 我們的戰略是通過在網路行銷，減少成本來達到與實體店家競爭，擁有相對便宜的價格卻又有高品質的商品當作我們的優勢，與許多進口盤商做競爭。<br>我們的策略 我們策略的實施建立在擁有在地製造商作為依靠，在技術與品管上面都能與國際品牌做抗衡，成就台灣製造不輸國際品牌之能力。<br>我們的優勢 我們的主要優勢包括技術的開發和完整產線，允許我們提供個人化開發項目，創造出與別人不同的價值。.</p>
           <div class="row">
-            <div class="col-12 col-md-2"><img src="./img/about/DP.png" alt=""/></div>
+            <div class="col-12 col-md-2"><img src="./img/about/pic01.jpg" alt=""/></div>
             <div class="col-12 col-md-10">
-              <h5>DP的堅持</h5>
-              <p>DP機油秉承創新與傳統，產品性能歷經實驗室精密調配以及數據驗證，來達到國產品牌超越進口品牌的目的，幫助您節省花費更能提高品質。
-              <br>我們擁有經驗豐富的設備製、專業的工程師以及完整的設備研發與生產，通過國際技術與自身研發部門共同創造更好的產品，研發更加先進的潤滑油品。無論是何種需求與條件，由我們幫助您克服目前和未來的挑戰。</p>
-
+              <h5>DP所做的</h5>
+              <p>Adipiscing dis a mus a convallis condimentum molestie penatibus iaculis pulvinar vestibulum enim lacus suscipit mi dictumst hendrerit sit condimentum at rutrum vulputate vestibulum habitasse nam fusce a nascetur. Ut ullamcorper suspendisse malesuada tempus vestibulum commodo habitasse suspendisse magnis.</p>
             </div>
-            <div class="col-12 col-md-2"><img src="./img/about/DP.png" alt=""/></div>
+            <div class="col-12 col-md-2"><img src="./img/about/pic02.jpg" alt=""/></div>
             <div class="col-12 col-md-10">
-              <h5>DP的專業</h5>
-              <p>我們使用國內外最尖端的技術，DP專業機油持續挑戰並精進自身技術並保持最佳品質。我們認為在任何一個市場的顧客，都能得到最好的照顧。我們用原物料為我們自身把關和挑選創造最高品質的產品，在品質方面DP機油絕不怠惰。DP專業機油產品性能，以數據佐證追求超越進口品牌。</p>
+              <h5>Ridiculus Torquent Quam Accumsan</h5>
+              <p>At sem phasellus elit class dapibus lectus posuere donec morbi in cras commodo faucibus ipsum vehicula fringilla. Risus hendrerit sit condimentum at rutrum vulputate fringilla dis curae metus ipsum imperdiet vulputate sapien dolorem ligula sapien curae consequat vestibulum urna. Nulla vulputate cum augue non arcu.</p>
             </div>
           </div>
         </div>
@@ -386,7 +99,7 @@ DP專業機油團隊的專業水準與國際標準看齊。專注發展和嚴以
         <div class="content">
           <ul>
             <li>
-              <div class="quest"><a data-toggle="collapse" href="#a1" role="button" aria-expanded="false" aria-controls="a1">Q1. 礦物油與合成油的差別?</a></div>
+              <div class="quest"><a data-toggle="collapse" href="#a1" role="button" aria-expanded="false" aria-controls="a1">Q1. 礦物油與合成油?</a></div>
               <div class="answer collapse" id="a1">
                 <div class="card card-body">
                   <p class="ans_title">A1.</p>
@@ -397,7 +110,7 @@ DP專業機油團隊的專業水準與國際標準看齊。專注發展和嚴以
               </div>
             </li>
             <li>
-              <div class="quest"><a data-toggle="collapse" href="#a2" role="button" aria-expanded="false" aria-controls="a2">Q2. 合成機油的優點?</a></div>
+              <div class="quest"><a data-toggle="collapse" href="#a2" role="button" aria-expanded="false" aria-controls="a2">Q2. 合成機油有什麼優點?</a></div>
               <div class="answer collapse" id="a2">
                 <div class="card card-body">
                   <p class="ans_title">A2.</p>
@@ -407,46 +120,6 @@ DP專業機油團隊的專業水準與國際標準看齊。專注發展和嚴以
                 </div>
               </div>
             </li>
-            <li>
-              <div class="quest"><a data-toggle="collapse" href="#a3" role="button" aria-expanded="false" aria-controls="a3">Q3. 機油對發動機的作用？</a></div>
-              <div class="answer collapse" id="a3">               <div class="card card-body">
-                  <p class="ans_title">A3.</p>
-                  <article class="ans">
-                    <p>  發動機是屬於汽車的心臟，所以發動機則是汽車動力最重要的一個結構，然而發動機在運轉中會有許多相互摩擦的金屬零件，一個優秀的潤滑油可依照品質達到不同程度的降低發動機零件的磨損，延長使用壽命，優秀的潤滑油要擁有六大作用
-					<p>1、潤滑減磨：保護在發動機內部運轉中的金屬零件，要防止零件過快的磨損，則需要在兩個滑動的金屬表面間建立足夠的油膜。有足夠厚度的油膜將相對滑動的金屬零件表面隔開以及潤滑，來達到減少磨損的目的。</p>
-					<p>2、冷卻降溫：機油會將運轉中產生的熱量帶回機油箱然後傳達至空氣中散熱幫助水箱快速冷卻發動機。</p>
-					<p>3、清洗清潔：優秀的機油能將發動機金屬零件上的碳化物、油泥、磨損金屬顆粒等雜物通迴圈帶回機油箱，通過潤滑油的流動，來清洗金屬零件工在作面上產生的髒物。</p>
-					<p>4、密封防漏：機油可以在活塞環與活塞之間形成一個密封圈，減少氣體的洩漏和防止外界的污染物進入。</p>
-					<p>5、防銹防蝕：潤滑油能吸咐在金屬零件表面產生保護膜，防止水、空氣、酸性物質及有害氣體對零件的破壞。</p>
-					<p>6、減震緩衝：發動機氣缸口壓力迅速上升時，會突然加劇活塞、活塞屑、連杆和曲軸軸承上的負荷，此時優秀的潤滑油在這時能產生傳遞功能軸承不被此負荷破壞，使承受的衝擊負荷達到緩衝減震的作用。</p>
-					</p>
-                  </article>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="quest"><a data-toggle="collapse" href="#a4" role="button" aria-expanded="false" aria-controls="a4">Q4. 酯類(ESTER)機油的優點?</a></div>
-              <div class="answer collapse" id="a4">
-                <div class="card card-body">
-                  <p class="ans_title">A4.</p>
-                  <article class="ans">
-                    <p>一、低溫流動性較好，所以對冷車引擎保護性較為優秀，VI值高(VI值:因溫度變化而導致黏度改變的程度，越高越不容易改變)。
-					<p>二、產生的酸性物質最為少量。</p>
-					<p>三、低摩擦性能，抗磨性能佳，可以使齒輪及軸承磨耗最少，達到更好的保護作用。</p>
-					<p>四、在高溫下不易形成膠質漆與結碳，減少產生雜質。</p>
-					<p>五、使用時間長久以後產品劣化時不易產生積垢或油泥等現象。</p>
-					<p>六、氧化穩定度極佳，不易變質。</p>
-					<p>七、低發揮性能，有較佳的高溫穩定性。</p>
-					<p>八、添加劑溶解性極佳。</p>
-					<p>九、膜強度、高熱氧化穩定性、高剪力穩定性。</p>
-					</p>
-                  </article>
-                </div>
-              </div>
-            </li>
-            
-            
-            
           </ul>
         </div>
       </div>
@@ -462,49 +135,62 @@ DP專業機油團隊的專業水準與國際標準看齊。專注發展和嚴以
               <div class="col-12 touch">
                 <h4>Get in Touch</h4>
                 <div class="row pics">
-                 	<div class="col-3 col-md-3">
-                	<div class="card"><a href="https://shopee.tw/nich1648"><img class="card-img-top" src="./img/footer/04.png" alt=""/></a></div>
-                	</div>
-                	<div class="col-3 col-md-3">
-                 	<div class="card"><a href="http://seller.pcstore.com.tw/S143157385"><img class="card-img-top" src="./img/footer/02.png" alt=""/></a></div>
-               		</div>
-                    <div class="col-3 col-md-3">
-                	<div class="card"><a href="http://class.ruten.com.tw/user/index00.php?s=nich1648"><img class="card-img-top" src="./img/footer/01.png" alt=""/></a></div>
-                	</div>
-                	<div class="col-3 col-md-3">
-                  	<div class="card"><a href="https://tw.bid.yahoo.com/booth/Y7807992086?bfe=1"><img class="card-img-top" src="./img/footer/05.png" alt=""/></a></div>
-                	</div>
-            	
+                  <div class="col-3 col-md-3">
+                    <div class="card"><a href="https://www.facebook.com/DPMotorOil/"><img class="card-img-top" src="./img/footer/04.png" alt=""/></a></div>
+                  </div>
+                  <div class="col-3 col-md-3">
+                    <div class="card"><a href="http://seller.pcstore.com.tw/S143157385"><img class="card-img-top" src="./img/footer/02.png" alt=""/></a></div>
+                  </div>
+                  <div class="col-3 col-md-3">
+                    <div class="card"><a href="http://class.ruten.com.tw/user/index00.php?s=nich1648"><img class="card-img-top" src="./img/footer/01.png" alt=""/></a></div>
+                  </div>
+                  <div class="col-3 col-md-3">
+                    <div class="card"><a href="https://tw.bid.yahoo.com/booth/Y7807992086?bfe=1"><img class="card-img-top" src="./img/footer/05.png" alt=""/></a></div>
+                  </div>
                 </div>
               </div>
               <div class="col-12 contact">
                 <div class="row">
                   <div class="col-12 col-md-4">
                     <h4>聯絡我</h4>
-                    <p>電話：0958750564</p>
-                    <p>Line：dpmotoroil</p>
+                    <p>電話: 0958750564</p>
+                    <p>Line: dpmotoroil</p>
                   </div>
-                  <div class="col-6 col-md-4">
-                    <a href=" http://line.me/ti/p/ThOQTykWBO"><img src="./img/about/L.png"/></a>
-                  </div>
-                  <div class="col-6 col-md-4">
-                    <a href=" https://www.facebook.com/DPMotorOil/"><img src="./img/about/facebook.png"/></a>
-                  </div>
+                  <div class="col-6 col-md-4"><a href="http://line.me/ti/p/ThOQTykWBO"><img src="./img/about/L.png"/></a></div>
+                  <div class="col-6 col-md-4"><a href="https://www.facebook.com/DPMotorOil/"><img src="./img/about/facebook.png"/></a></div>
                 </div>
-                  
-                   
-              </div> 
+              </div>
             </div>
           </div>
         </div>
-        <div class="end">
-          <div class="row">
-            <div class="col-12">
-              <p><a href="https://www.facebook.com/DPMotorOil/"> 2018 Copyright © DPMotorOil All Rights Reserved.Design by Taiwan Products</a> </p>
+        <div class="end"><a href="https://www.facebook.com/DPMotorOil/">2018 Copyright © DPMotorOil All Rights Reserved.Design by Taiwan Products</a></div>
+      </div>
+    </div>
+    <template id="card">
+      <div class="card_container"><a href="#" data-toggle="modal" :data-target="card_data.target"><img class="card-img-top" :src="card_data.img"/>
+          <div class="card-body">
+            <div class="card-title">
+              <p>{{card_data.title}}</p>
+            </div>
+          </div></a>
+        <div class="modal fade" :id="card_data.target_id" tabindex="-1" role="dialog" :aria-labelledby="card_data.label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" :id="card_data.label">{{card_data.title}}</h5>
+              </div>
+              <div class="modal-body"><img :src="card_data.img"/>
+                <p>{{card_data.title}}</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </template>
+    <!--js-->
+    <script src="./js/index.js"></script>
   </body>
 </html>

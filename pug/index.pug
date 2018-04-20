@@ -13,8 +13,8 @@ html
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
     //css
     link(rel="stylesheet"  href="./css/style.css")
-    //js
-    script(src="./js/index.js")
+    //vue
+    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
 
     title DPMotorOil
   body
@@ -44,208 +44,23 @@ html
           p.lead 讓每一個消費者能真正使用到符合自己的好產品。            
           a(href="#product" onclick="start()").btn.btn-light Continue
 
+      #app
+        #product
+          h1.title 產品
+          .container
+            .row
+              .col-md-3.col-6(v-if="card.id == 'product'" v-for="card in cards")
+                .card
+                  card(:card_data="card")
+ 
+        #experiment
+          h1.title 實驗室介紹
+          .container
+            .row
+              .co-md-3.col-6(v-if="card.id == 'experiment'" v-for="card in cards")
+                .card
+                  card(:card_data="card")
         
-      #product
-        h1.title 產品
-        .container
-          .row
-            .col-md-3.col-6
-              .card
-                a(href="#" data-toggle="modal" data-target="#pic1")
-                  img(src="./img/product/01.jpg").card-img-top
-                  .card-body
-                    .card-title
-                      p pic01
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/02.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic02
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/03.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic03
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/04.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic04
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/05.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic05
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/06.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic06
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/07.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic07
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/08.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic08
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/09.jpg").card-img-top
-                .card-body
-                    .card-title
-                      p pic09
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/10.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic10
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/11.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic11
-            .col-md-3.col-6
-              .card
-                img(src="./img/product/12.jpg").card-img-top
-                .card-body
-                  .card-title
-                    p pic12
-
-        #pic1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="pic1Label" aria-hidden="true")
-          .modal-dialog(role="document")
-            .modal-content
-              .modal-header
-                h5.modal-title#pic1Label pic1
-              .modal-body
-                img(src="./img/product/01.jpg")
-                p pic01
-              .modal-footer
-                button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-        
-      #experiment
-        h1.title 實驗室介紹
-        .container               
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/01-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 冷啟動模擬器  
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/02-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 高溫高剪切測定儀     
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/03-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 消泡測試儀   
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/04-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 低溫流動測定儀    
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/05-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p MINI-ROTARY VISCOMETER    
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/06-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 自動黏度測定儀 
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/07-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 閉杯式閃火點測定儀              
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/08-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 開杯式閃火點測定儀              
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/09-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p TAN、TBN 酸價、鹼價測   
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/10-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 銅板腐蝕測試儀          
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/11-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 色相分析儀              
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/12-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 831KF Coulometer 庫倫式水分測定   
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/13-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 乳化測定儀  
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/14-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 傅立葉紅外線光譜儀
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/15-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 潤滑脂錐入度測定儀              
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/16-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p 寬潤滑脂溫度範圍滴定測定儀             
-          .row
-            .col-md-3.col-6
-              .card
-                img(src="./img/experiment/17-s.jpg" alt="").card-img-top
-                .card-body
-                  .card-title
-                    p XRF光譜
         
       #about
         h1.title 關於DP
@@ -309,20 +124,54 @@ html
                 .row.pics
                   .col-3.col-md-3
                     .card
-                      img(src="./img/footer/01.jpg" alt="").card-img-top
+                      a(href="https://www.facebook.com/DPMotorOil/")
+                        img(src="./img/footer/04.png" alt="").card-img-top
                   .col-3.col-md-3
                     .card
-                      img(src="./img/footer/02.png" alt="").card-img-top
+                      a(href="http://seller.pcstore.com.tw/S143157385")
+                        img(src="./img/footer/02.png" alt="").card-img-top
                   .col-3.col-md-3
                     .card
-                      img(src="./img/footer/03.png" alt="").card-img-top
+                      a(href="http://class.ruten.com.tw/user/index00.php?s=nich1648")
+                        img(src="./img/footer/01.png" alt="").card-img-top
                   .col-3.col-md-3
                     .card
-                      img(src="./img/footer/04.png" alt="").card-img-top
+                      a(href="https://tw.bid.yahoo.com/booth/Y7807992086?bfe=1")
+                        img(src="./img/footer/05.png" alt="").card-img-top
               .col-12.contact
-                h4 聯絡我
-                p 電話:
-                p Line:
-        .end.row
-          .col-12
-            p 2018.4
+                .row
+                  .col-12.col-md-4
+                    h4 聯絡我
+                    p 電話: 0958750564
+                    p Line: dpmotoroil
+                  .col-6.col-md-4
+                    a(href="http://line.me/ti/p/ThOQTykWBO")
+                      img(src="./img/about/L.png")
+                  .col-6.col-md-4
+                    a(href="https://www.facebook.com/DPMotorOil/")
+                      img(src="./img/about/facebook.png")
+        .end
+          a(href="https://www.facebook.com/DPMotorOil/") 2018 Copyright © DPMotorOil All Rights Reserved.Design by Taiwan Products
+
+    template#card
+      .card_container
+        a(href="#" data-toggle="modal" :data-target="card_data.target")
+          img(:src="card_data.img").card-img-top
+          .card-body
+            .card-title
+              p {{card_data.title}}
+
+        .modal.fade(:id="card_data.target_id" tabindex="-1" role="dialog" :aria-labelledby="card_data.label" aria-hidden="true")
+          .modal-dialog(role="document")
+            .modal-content
+              .modal-header
+                h5.modal-title(:id="card_data.label") {{card_data.title}}
+              .modal-body
+                img(:src="card_data.img")
+                p {{card_data.title}}
+              .modal-footer
+                button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+
+
+    //js
+    script(src="./js/index.js")
