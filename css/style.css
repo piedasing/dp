@@ -66,6 +66,18 @@ html, body, #main {
 #main #footer {
   display: none; }
 
+#main #product .myframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  #main #product .myframe iframe {
+    width: 95%;
+    height: 300px;
+    border: none;
+    margin: 10px;
+    padding: 10px; }
+
 #main #product .container, #main #experiment .container {
   width: 100%; }
   #main #product .container .row, #main #experiment .container .row {

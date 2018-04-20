@@ -47,6 +47,8 @@ html
       #app
         #product
           h1.title 產品
+          .myframe
+            iframe(src="https://www.youtube.com/embed/pMyr4Cy0-No?ecver=2" allow="autoplay; encrypted-media" allowfullscreen)
           .container
             .row
               .col-md-3.col-6(v-if="card.id == 'product'" v-for="card in cards")
