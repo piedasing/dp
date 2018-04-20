@@ -40,7 +40,7 @@ html, body, #main {
 
 #main #home {
   background-color: #ccc;
-  animation: sliceIn 1s 0.1s ease; }
+  animation: sliceIn 1s 0.2s ease; }
   #main #home .cover {
     display: flex;
     align-items: center;
@@ -75,12 +75,12 @@ html, body, #main {
   background-color: #fff;
   font-size: 20pt;
   font-weight: bold;
-  animation: sliceIn 1s 0.1s ease; }
+  animation: fadeIn 1.5s ease both; }
 
 #main #product, #main #experiment, #main #about, #main #QA {
   padding-top: 100px;
-  animation: fadeIn 1s ease both;
-  display: none; }
+  display: none;
+  animation: sliceIn 1s 0.1s ease; }
 
 #main #footer {
   display: none; }
@@ -131,23 +131,23 @@ html, body, #main {
           align-items: center;
           justify-content: center;
           flex-direction: column; }
-
-#main #product .modal-dialog .modal-header, #main #experiment .modal-dialog .modal-header {
-  background-color: #eee;
-  border-bottom: solid 1px #777; }
-
-#main #product .modal-dialog .modal-body, #main #experiment .modal-dialog .modal-body {
-  border-bottom: solid 1px #777; }
-  #main #product .modal-dialog .modal-body img, #main #experiment .modal-dialog .modal-body img {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto; }
-  #main #product .modal-dialog .modal-body p, #main #experiment .modal-dialog .modal-body p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
+  #main #product .container .modal-dialog .modal-content, #main #experiment .container .modal-dialog .modal-content {
+    background-color: #fff; }
+  #main #product .container .modal-dialog .modal-header, #main #experiment .container .modal-dialog .modal-header {
+    background-color: #eee;
+    border-bottom: solid 1px #777; }
+  #main #product .container .modal-dialog .modal-body, #main #experiment .container .modal-dialog .modal-body {
+    border-bottom: solid 1px #777; }
+    #main #product .container .modal-dialog .modal-body img, #main #experiment .container .modal-dialog .modal-body img {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto; }
+    #main #product .container .modal-dialog .modal-body p, #main #experiment .container .modal-dialog .modal-body p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
 
 #main #about {
   line-height: 30pt; }

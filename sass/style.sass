@@ -50,7 +50,7 @@ html,body,#main
 #main
   #home
     background-color: #ccc
-    animation: sliceIn 1s 0.1s ease
+    animation: sliceIn 1s 0.2s ease
     .cover
       +center
       +size(100%)
@@ -77,12 +77,12 @@ html,body,#main
     background-color: #fff
     font-size: 20pt
     font-weight: bold
-    animation: sliceIn 1s 0.1s ease  
+    animation: fadeIn 1.5s ease both  
 
   #product,#experiment,#about,#QA
     padding-top: 100px
-    animation: fadeIn 1s ease both
     display: none
+    animation: sliceIn 1s 0.1s ease
   #footer
     display: none
 
@@ -126,17 +126,19 @@ html,body,#main
             border-top: solid 1px #888
             p
               +center
-    .modal-dialog
-      .modal-header
-        background-color: #eee
-        border-bottom: solid 1px #777
-      .modal-body  
-        border-bottom: solid 1px #777
-        img
-          +size(200px)
-          +img_center
-        p
-          +center
+      .modal-dialog
+        .modal-content
+          background-color: #fff
+        .modal-header
+          background-color: #eee
+          border-bottom: solid 1px #777
+        .modal-body  
+          border-bottom: solid 1px #777
+          img
+            +size(200px)
+            +img_center
+          p
+            +center
             
   #about
     line-height: 30pt

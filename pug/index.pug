@@ -64,6 +64,8 @@ html
                   card(:card_data="card")
         
         
+        
+        
       #about
         h1.title 關於DP
         .content
@@ -157,7 +159,7 @@ html
 
     template#card
       .card_container
-        a(href="#" data-toggle="modal" :data-target="card_data.target")
+        a(data-toggle="modal" :data-target="card_data.target")
           img(:src="card_data.img").card-img-top
           .card-body
             .card-title
@@ -168,11 +170,12 @@ html
             .modal-content
               .modal-header
                 h5.modal-title(:id="card_data.label") {{card_data.title}}
+                button.close(type="button" data-dismiss="modal") &times
               .modal-body
                 img(:src="card_data.img")
                 p {{card_data.title}}
               .modal-footer
-                button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                button(type="button" class="close" data-dismiss="modal") Close
 
 
     //js
