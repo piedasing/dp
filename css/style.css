@@ -1,4 +1,20 @@
 @charset "UTF-8";
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+    filter: saturate(0%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    filter: saturate(100%); } }
+
+@keyframes sliceIn {
+  0% {
+    transform: translateX(-50px); }
+  100% {
+    transform: translateX(0px); } }
+
 html, body, #main {
   width: 100%;
   height: 100%;
@@ -23,7 +39,8 @@ html, body, #main {
     color: #0ff; }
 
 #main #home {
-  background-color: #ccc; }
+  background-color: #ccc;
+  animation: sliceIn 1s 0.1s ease; }
   #main #home .cover {
     display: flex;
     align-items: center;
@@ -57,10 +74,12 @@ html, body, #main {
   flex-direction: column;
   background-color: #fff;
   font-size: 20pt;
-  font-weight: bold; }
+  font-weight: bold;
+  animation: sliceIn 1s 0.1s ease; }
 
 #main #product, #main #experiment, #main #about, #main #QA {
   padding-top: 100px;
+  animation: fadeIn 1s ease both;
   display: none; }
 
 #main #footer {
@@ -72,7 +91,7 @@ html, body, #main {
   justify-content: center;
   flex-direction: column; }
   #main #product .myframe iframe {
-    width: 95%;
+    width: 100%;
     height: 300px;
     border: none;
     margin: 10px;

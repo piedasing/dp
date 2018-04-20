@@ -12,6 +12,22 @@
   display: block
   margin: 0 auto
 
+@keyframes fadeIn
+  0%
+    opacity: 0
+    transform: translateX(30px)
+    filter: saturate(0%)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+    filter: saturate(100%)
+
+@keyframes sliceIn
+  0%
+    transform: translateX(-50px)
+  100%
+    transform: translateX(0px)
+
 html,body,#main
   +size(100%)
   margin: 0
@@ -34,6 +50,7 @@ html,body,#main
 #main
   #home
     background-color: #ccc
+    animation: sliceIn 1s 0.1s ease
     .cover
       +center
       +size(100%)
@@ -60,9 +77,11 @@ html,body,#main
     background-color: #fff
     font-size: 20pt
     font-weight: bold
+    animation: sliceIn 1s 0.1s ease  
 
   #product,#experiment,#about,#QA
     padding-top: 100px
+    animation: fadeIn 1s ease both
     display: none
   #footer
     display: none
@@ -71,7 +90,7 @@ html,body,#main
     .myframe
       +center
       iframe
-        width: 95%
+        width: 100%
         height: 300px
         border: none
         margin: 10px
