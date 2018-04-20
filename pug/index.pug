@@ -59,7 +59,7 @@ html
           h1.title 實驗室介紹
           .container
             .row
-              .co-md-3.col-6(v-if="card.id == 'experiment'" v-for="card in cards")
+              .col-md-3.col-6(v-if="card.id == 'experiment'" v-for="card in cards")
                 .card
                   card(:card_data="card")
         
@@ -165,15 +165,15 @@ html
             .card-title
               p {{card_data.title}}
 
-        .modal.fade(:id="card_data.target_id" tabindex="-1" role="dialog" :aria-labelledby="card_data.label" aria-hidden="true")
+        .modal.fade(:id="card_data.target_id" tabindex="-1" role="dialog"  aria-hidden="true")
           .modal-dialog(role="document")
             .modal-content
               .modal-header
-                h5.modal-title(:id="card_data.label") {{card_data.title}}
+                h5.modal-title {{card_data.title}}
                 button.close(type="button" data-dismiss="modal") &times
               .modal-body
                 img(:src="card_data.img")
-                p {{card_data.title}}
+                pre {{card_data.intro}}
               .modal-footer
                 button(type="button" class="close" data-dismiss="modal") Close
 

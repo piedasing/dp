@@ -59,7 +59,7 @@
           <h1 class="title">實驗室介紹</h1>
           <div class="container">
             <div class="row">
-              <div class="co-md-3 col-6" v-if="card.id == 'experiment'" v-for="card in cards">
+              <div class="col-md-3 col-6" v-if="card.id == 'experiment'" v-for="card in cards">
                 <div class="card">
                   <card :card_data="card"></card>
                 </div>
@@ -176,15 +176,15 @@
               <p>{{card_data.title}}</p>
             </div>
           </div></a>
-        <div class="modal fade" :id="card_data.target_id" tabindex="-1" role="dialog" :aria-labelledby="card_data.label" aria-hidden="true">
+        <div class="modal fade" :id="card_data.target_id" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" :id="card_data.label">{{card_data.title}}</h5>
+                <h5 class="modal-title">{{card_data.title}}</h5>
                 <button class="close" type="button" data-dismiss="modal">&times</button>
               </div>
               <div class="modal-body"><img :src="card_data.img"/>
-                <p>{{card_data.title}}</p>
+                <pre>{{card_data.intro}}</pre>
               </div>
               <div class="modal-footer">
                 <button class="close" type="button" data-dismiss="modal">Close</button>
