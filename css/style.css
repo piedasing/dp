@@ -39,8 +39,7 @@ html, body, #main {
     color: #0ff; }
 
 #main #home {
-  background-color: #ccc;
-  animation: sliceIn 1s 0.2s ease; }
+  background-color: #ccc; }
   #main #home .cover {
     display: flex;
     align-items: center;
@@ -74,8 +73,7 @@ html, body, #main {
   flex-direction: column;
   background-color: #fff;
   font-size: 20pt;
-  font-weight: bold;
-  animation: fadeIn 1.5s ease both; }
+  font-weight: bold; }
 
 #main #product, #main #experiment, #main #about, #main #act, #main #QA {
   padding-top: 100px;
