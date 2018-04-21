@@ -77,7 +77,7 @@ html, body, #main {
   font-weight: bold;
   animation: fadeIn 1.5s ease both; }
 
-#main #product, #main #experiment, #main #about, #main #QA {
+#main #product, #main #experiment, #main #about, #main #act, #main #QA {
   padding-top: 100px;
   display: none;
   animation: sliceIn 1s 0.1s ease; }
@@ -143,59 +143,62 @@ html, body, #main {
       height: 200px;
       display: block;
       margin: 0 auto; }
-    #main #product .container .modal-dialog .modal-body p, #main #experiment .container .modal-dialog .modal-body p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
+    #main #product .container .modal-dialog .modal-body .intro_title, #main #experiment .container .modal-dialog .modal-body .intro_title {
+      text-align: center; }
 
 #main #about {
   line-height: 30pt; }
   #main #about .content {
     padding: 0 10%; }
-  #main #about .row {
+    #main #about .content h3 {
+      margin-top: 20px; }
+    #main #about .content p {
+      margin: 0; }
+  #main #about .mycol {
+    padding: 0 15px;
     border: solid 1px #aaa;
-    margin: 20px 0; }
-    #main #about .row h5 {
+    margin: 20px; }
+    #main #about .mycol h5 {
       font-weight: bold; }
-    #main #about .row p {
+    #main #about .mycol p {
+      margin: 0;
       font-size: 11pt; }
-    #main #about .row img {
+    #main #about .mycol img {
       display: block;
       margin: 0 auto; }
 
-#main #QA .content {
+#main #act .content, #main #QA .content {
   padding: 0 10%; }
-  #main #QA .content ul {
+  #main #act .content ul, #main #QA .content ul {
     list-style-type: none; }
-    #main #QA .content ul li {
+    #main #act .content ul li, #main #QA .content ul li {
       border-bottom: solid 1px #000; }
-      #main #QA .content ul li .quest {
+      #main #act .content ul li .quest, #main #QA .content ul li .quest {
         width: 100%;
         height: auto;
         overflow: hidden;
         padding: 15px; }
-        #main #QA .content ul li .quest a {
+        #main #act .content ul li .quest a, #main #QA .content ul li .quest a {
           text-decoration: none;
           color: #000; }
-        #main #QA .content ul li .quest a:hover, #main #QA .content ul li .quest a:focus {
+        #main #act .content ul li .quest a:hover, #main #act .content ul li .quest a:focus, #main #QA .content ul li .quest a:hover, #main #QA .content ul li .quest a:focus {
           color: #00f; }
-      #main #QA .content ul li .answer {
+      #main #act .content ul li .answer, #main #QA .content ul li .answer {
         width: 100%;
         height: auto;
         position: relative;
         padding-left: 10px; }
-        #main #QA .content ul li .answer .card {
+        #main #act .content ul li .answer .card, #main #QA .content ul li .answer .card {
           margin-bottom: 10px;
           background-color: #ddd;
           border: solid 1px #888; }
-        #main #QA .content ul li .answer .ans_title {
+        #main #act .content ul li .answer .ans_title, #main #QA .content ul li .answer .ans_title {
           position: absolute;
           top: 20px;
           left: 20px;
           margin: 0;
           padding: 0; }
-        #main #QA .content ul li .answer .ans {
+        #main #act .content ul li .answer .ans, #main #QA .content ul li .answer .ans {
           width: 100%;
           height: auto;
           line-height: 30px;

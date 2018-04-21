@@ -79,7 +79,7 @@ html,body,#main
     font-weight: bold
     animation: fadeIn 1.5s ease both  
 
-  #product,#experiment,#about,#QA
+  #product,#experiment,#about,#act,#QA
     padding-top: 100px
     display: none
     animation: sliceIn 1s 0.1s ease
@@ -137,24 +137,30 @@ html,body,#main
           img
             +size(200px)
             +img_center
-          p
-            +center
+          .intro_title
+            text-align: center
             
   #about
     line-height: 30pt
     .content
       padding: 0 10%
-    .row
+      h3
+        margin-top: 20px
+      p
+        margin: 0
+    .mycol
+      padding: 0 15px
       border: solid 1px #aaa
-      margin: 20px 0
+      margin: 20px
       h5
         font-weight: bold
       p
+        margin: 0
         font-size: 11pt
       img
         +img_center
 
-  #QA
+  #act,#QA
     .content
       padding: 0 10%
       ul
