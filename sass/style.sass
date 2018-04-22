@@ -12,21 +12,21 @@
   display: block
   margin: 0 auto
 
-@keyframes fadeIn
+@keyframes sliceIn_left
   0%
+    transform: translateX(-100px)
     opacity: 0
-    transform: translateX(30px)
-    filter: saturate(0%)
   100%
+    transform: translateX(0px)
     opacity: 1
-    transform: translateX(0px)
-    filter: saturate(100%)
 
-@keyframes sliceIn
+@keyframes sliceIn_down
   0%
-    transform: translateX(-50px)
+    transform: translateY(-100px)
+    opacity: 0
   100%
-    transform: translateX(0px)
+    transform: translateY(0px)
+    opacity: 1
 
 html,body,#main
   +size(100%)
@@ -34,6 +34,13 @@ html,body,#main
   padding: 0
   font-family: "微軟正黑體"
   background-color: #ddd
+
+#loading
+  +size(100%)
+  +center
+  background-color: #fff
+  font-weight: bold
+  font-size: 25pt
 
 #nav
   display: none
@@ -48,8 +55,10 @@ html,body,#main
     color: #0ff
 
 #main
+  display: none
   #home
     background-color: #ccc
+    animation: sliceIn_left 1s 0.1s ease
     .cover
       +center
       +size(100%)
@@ -77,13 +86,10 @@ html,body,#main
     font-size: 20pt
     font-weight: bold
     
-
   #product,#experiment,#about,#act,#QA
     padding-top: 100px
     display: none
-    animation: sliceIn 1s 0.1s ease
-  #footer
-    display: none
+    animation: sliceIn_down 1s 0.1s ease
 
   #product
     .myframe
@@ -161,7 +167,6 @@ html,body,#main
 
   #act,#QA
     .content
-      padding: 0 10%
       ul
         list-style-type: none
         li
@@ -195,9 +200,10 @@ html,body,#main
               width: 100%
               height: auto
               line-height: 30px
-              padding: 0px 35px
+              padding: 0px 10px 0px 35px
 
   #footer
+    display: none
     width: 100%
     .content
       margin: 0
@@ -232,3 +238,4 @@ html,body,#main
       background-color: #fff
       a
         +center
+

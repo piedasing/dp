@@ -1,19 +1,19 @@
 @charset "UTF-8";
-@keyframes fadeIn {
+@keyframes sliceIn_left {
   0% {
-    opacity: 0;
-    transform: translateX(30px);
-    filter: saturate(0%); }
+    transform: translateX(-100px);
+    opacity: 0; }
   100% {
-    opacity: 1;
     transform: translateX(0px);
-    filter: saturate(100%); } }
+    opacity: 1; } }
 
-@keyframes sliceIn {
+@keyframes sliceIn_down {
   0% {
-    transform: translateX(-50px); }
+    transform: translateY(-100px);
+    opacity: 0; }
   100% {
-    transform: translateX(0px); } }
+    transform: translateY(0px);
+    opacity: 1; } }
 
 html, body, #main {
   width: 100%;
@@ -22,6 +22,17 @@ html, body, #main {
   padding: 0;
   font-family: "微軟正黑體";
   background-color: #ddd; }
+
+#loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 25pt; }
 
 #nav {
   display: none; }
@@ -38,135 +49,127 @@ html, body, #main {
   #nav a:hover {
     color: #0ff; }
 
-#main #home {
-  background-color: #ccc; }
-  #main #home .cover {
+#main {
+  display: none; }
+  #main #home {
+    background-color: #ccc;
+    animation: sliceIn_left 1s 0.1s ease; }
+    #main #home .cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background: url("../img/cover1.png") center no-repeat;
+      background-size: cover;
+      color: #000;
+      padding-top: 20vh; }
+      #main #home .cover h1 {
+        font-weight: 900;
+        margin-bottom: 40px; }
+      #main #home .cover p {
+        font-weight: 400;
+        margin-bottom: 40px;
+        word-wrap: break-all;
+        padding: 0 50px; }
+      #main #home .cover a {
+        border: solid 1px #777;
+        color: #000;
+        opacity: 0.8; }
+  #main .title {
+    width: 100%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background: url("../img/cover1.png") center no-repeat;
-    background-size: cover;
-    color: #000;
-    padding-top: 20vh; }
-    #main #home .cover h1 {
-      font-weight: 900;
-      margin-bottom: 40px; }
-    #main #home .cover p {
-      font-weight: 400;
-      margin-bottom: 40px;
-      word-wrap: break-all;
-      padding: 0 50px; }
-    #main #home .cover a {
-      border: solid 1px #777;
-      color: #000;
-      opacity: 0.8; }
-
-#main .title {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #fff;
-  font-size: 20pt;
-  font-weight: bold; }
-
-#main #product, #main #experiment, #main #about, #main #act, #main #QA {
-  padding-top: 100px;
-  display: none;
-  animation: sliceIn 1s 0.1s ease; }
-
-#main #footer {
-  display: none; }
-
-#main #product .myframe {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-  #main #product .myframe iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    margin: 10px;
-    padding: 10px; }
-
-#main #product .container, #main #experiment .container {
-  width: 100%; }
-  #main #product .container .row, #main #experiment .container .row {
-    padding: 0px 0;
-    margin: 0; }
-  #main #product .container .col-md-3, #main #product .container .col-6, #main #experiment .container .col-md-3, #main #experiment .container .col-6 {
-    padding: 0;
-    border-bottom: solid 10px #eee; }
-    #main #product .container .col-md-3 .card, #main #product .container .col-6 .card, #main #experiment .container .col-md-3 .card, #main #experiment .container .col-6 .card {
-      background-color: #ddd;
-      border: solid 1px #888;
-      height: 250px; }
-      #main #product .container .col-md-3 .card a, #main #product .container .col-6 .card a, #main #experiment .container .col-md-3 .card a, #main #experiment .container .col-6 .card a {
-        text-decoration: none;
-        color: #000; }
-      #main #product .container .col-md-3 .card a:hover, #main #product .container .col-6 .card a:hover, #main #experiment .container .col-md-3 .card a:hover, #main #experiment .container .col-6 .card a:hover {
-        color: #08a; }
-      #main #product .container .col-md-3 .card img, #main #product .container .col-6 .card img, #main #experiment .container .col-md-3 .card img, #main #experiment .container .col-6 .card img {
-        width: 160px;
-        height: 160px;
+    background-color: #fff;
+    font-size: 20pt;
+    font-weight: bold; }
+  #main #product, #main #experiment, #main #about, #main #act, #main #QA {
+    padding-top: 100px;
+    display: none;
+    animation: sliceIn_down 1s 0.1s ease; }
+  #main #product .myframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    #main #product .myframe iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin: 10px;
+      padding: 10px; }
+  #main #product .container, #main #experiment .container {
+    width: 100%; }
+    #main #product .container .row, #main #experiment .container .row {
+      padding: 0px 0;
+      margin: 0; }
+    #main #product .container .col-md-3, #main #product .container .col-6, #main #experiment .container .col-md-3, #main #experiment .container .col-6 {
+      padding: 0;
+      border-bottom: solid 10px #eee; }
+      #main #product .container .col-md-3 .card, #main #product .container .col-6 .card, #main #experiment .container .col-md-3 .card, #main #experiment .container .col-6 .card {
+        background-color: #ddd;
+        border: solid 1px #888;
+        height: 250px; }
+        #main #product .container .col-md-3 .card a, #main #product .container .col-6 .card a, #main #experiment .container .col-md-3 .card a, #main #experiment .container .col-6 .card a {
+          text-decoration: none;
+          color: #000; }
+        #main #product .container .col-md-3 .card a:hover, #main #product .container .col-6 .card a:hover, #main #experiment .container .col-md-3 .card a:hover, #main #experiment .container .col-6 .card a:hover {
+          color: #08a; }
+        #main #product .container .col-md-3 .card img, #main #product .container .col-6 .card img, #main #experiment .container .col-md-3 .card img, #main #experiment .container .col-6 .card img {
+          width: 160px;
+          height: 160px;
+          display: block;
+          margin: 0 auto; }
+        #main #product .container .col-md-3 .card img:hover, #main #product .container .col-6 .card img:hover, #main #experiment .container .col-md-3 .card img:hover, #main #experiment .container .col-6 .card img:hover {
+          transform: translateY(-10px);
+          transition: 0.3s; }
+        #main #product .container .col-md-3 .card .card-img-top, #main #product .container .col-6 .card .card-img-top, #main #experiment .container .col-md-3 .card .card-img-top, #main #experiment .container .col-6 .card .card-img-top {
+          padding: 10px; }
+        #main #product .container .col-md-3 .card .card-body, #main #product .container .col-6 .card .card-body, #main #experiment .container .col-md-3 .card .card-body, #main #experiment .container .col-6 .card .card-body {
+          border-top: solid 1px #888; }
+          #main #product .container .col-md-3 .card .card-body p, #main #product .container .col-6 .card .card-body p, #main #experiment .container .col-md-3 .card .card-body p, #main #experiment .container .col-6 .card .card-body p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; }
+    #main #product .container .modal-dialog .modal-content, #main #experiment .container .modal-dialog .modal-content {
+      background-color: #fff; }
+    #main #product .container .modal-dialog .modal-header, #main #experiment .container .modal-dialog .modal-header {
+      background-color: #eee;
+      border-bottom: solid 1px #777; }
+    #main #product .container .modal-dialog .modal-body, #main #experiment .container .modal-dialog .modal-body {
+      border-bottom: solid 1px #777; }
+      #main #product .container .modal-dialog .modal-body img, #main #experiment .container .modal-dialog .modal-body img {
+        width: 200px;
+        height: 200px;
         display: block;
         margin: 0 auto; }
-      #main #product .container .col-md-3 .card img:hover, #main #product .container .col-6 .card img:hover, #main #experiment .container .col-md-3 .card img:hover, #main #experiment .container .col-6 .card img:hover {
-        transform: translateY(-10px);
-        transition: 0.3s; }
-      #main #product .container .col-md-3 .card .card-img-top, #main #product .container .col-6 .card .card-img-top, #main #experiment .container .col-md-3 .card .card-img-top, #main #experiment .container .col-6 .card .card-img-top {
-        padding: 10px; }
-      #main #product .container .col-md-3 .card .card-body, #main #product .container .col-6 .card .card-body, #main #experiment .container .col-md-3 .card .card-body, #main #experiment .container .col-6 .card .card-body {
-        border-top: solid 1px #888; }
-        #main #product .container .col-md-3 .card .card-body p, #main #product .container .col-6 .card .card-body p, #main #experiment .container .col-md-3 .card .card-body p, #main #experiment .container .col-6 .card .card-body p {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column; }
-  #main #product .container .modal-dialog .modal-content, #main #experiment .container .modal-dialog .modal-content {
-    background-color: #fff; }
-  #main #product .container .modal-dialog .modal-header, #main #experiment .container .modal-dialog .modal-header {
-    background-color: #eee;
-    border-bottom: solid 1px #777; }
-  #main #product .container .modal-dialog .modal-body, #main #experiment .container .modal-dialog .modal-body {
-    border-bottom: solid 1px #777; }
-    #main #product .container .modal-dialog .modal-body img, #main #experiment .container .modal-dialog .modal-body img {
-      width: 200px;
-      height: 200px;
-      display: block;
-      margin: 0 auto; }
-    #main #product .container .modal-dialog .modal-body .intro_title, #main #experiment .container .modal-dialog .modal-body .intro_title {
-      text-align: center; }
-
-#main #about {
-  line-height: 30pt; }
-  #main #about .content {
-    padding: 0 10%; }
-    #main #about .content h3 {
-      margin-top: 20px; }
-    #main #about .content p {
-      margin: 0; }
-  #main #about .mycol {
-    padding: 0 15px;
-    border: solid 1px #aaa;
-    margin: 20px; }
-    #main #about .mycol h5 {
-      font-weight: bold; }
-    #main #about .mycol p {
-      margin: 0;
-      font-size: 11pt; }
-    #main #about .mycol img {
-      display: block;
-      margin: 0 auto; }
-
-#main #act .content, #main #QA .content {
-  padding: 0 10%; }
+      #main #product .container .modal-dialog .modal-body .intro_title, #main #experiment .container .modal-dialog .modal-body .intro_title {
+        text-align: center; }
+  #main #about {
+    line-height: 30pt; }
+    #main #about .content {
+      padding: 0 10%; }
+      #main #about .content h3 {
+        margin-top: 20px; }
+      #main #about .content p {
+        margin: 0; }
+    #main #about .mycol {
+      padding: 0 15px;
+      border: solid 1px #aaa;
+      margin: 20px; }
+      #main #about .mycol h5 {
+        font-weight: bold; }
+      #main #about .mycol p {
+        margin: 0;
+        font-size: 11pt; }
+      #main #about .mycol img {
+        display: block;
+        margin: 0 auto; }
   #main #act .content ul, #main #QA .content ul {
     list-style-type: none; }
     #main #act .content ul li, #main #QA .content ul li {
@@ -200,49 +203,49 @@ html, body, #main {
           width: 100%;
           height: auto;
           line-height: 30px;
-          padding: 0px 35px; }
-
-#main #footer {
-  width: 100%; }
-  #main #footer .content {
-    margin: 0;
-    padding: 50px 5%;
-    background-color: #ccc;
-    line-height: 25pt; }
-    #main #footer .content h4 {
-      font-weight: bold;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
-    #main #footer .content .touch, #main #footer .content .contact {
-      margin-bottom: 40px; }
-      #main #footer .content .touch .pics .card, #main #footer .content .contact .pics .card {
-        background-color: #ccc;
-        border: 0; }
-        #main #footer .content .touch .pics .card img, #main #footer .content .contact .pics .card img {
-          width: 70px;
-          height: 70px;
-          display: block;
-          margin: 0 auto; }
-    #main #footer .content .contact p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
-    #main #footer .content .contact img {
-      display: block;
-      margin: 0 auto;
-      width: 100px;
-      height: 100px;
-      margin-left: 20px; }
-  #main #footer .end {
-    margin: 0;
-    padding: 0;
-    background-color: #fff; }
-    #main #footer .end a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
+          padding: 0px 10px 0px 35px; }
+  #main #footer {
+    display: none;
+    width: 100%; }
+    #main #footer .content {
+      margin: 0;
+      padding: 50px 5%;
+      background-color: #ccc;
+      line-height: 25pt; }
+      #main #footer .content h4 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+      #main #footer .content .touch, #main #footer .content .contact {
+        margin-bottom: 40px; }
+        #main #footer .content .touch .pics .card, #main #footer .content .contact .pics .card {
+          background-color: #ccc;
+          border: 0; }
+          #main #footer .content .touch .pics .card img, #main #footer .content .contact .pics .card img {
+            width: 70px;
+            height: 70px;
+            display: block;
+            margin: 0 auto; }
+      #main #footer .content .contact p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+      #main #footer .content .contact img {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        margin-left: 20px; }
+    #main #footer .end {
+      margin: 0;
+      padding: 0;
+      background-color: #fff; }
+      #main #footer .end a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }

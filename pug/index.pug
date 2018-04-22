@@ -8,16 +8,20 @@ html
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous")
     //bootstrap 4.0.0
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
-    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
     //css
     link(rel="stylesheet"  href="./css/style.css")
     //vue
     script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    script(src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js")
 
     title DPMotorOil
-  body
+  body(onload="loading()")
+    #loading
+      p 網頁載入中...
+      
     #nav.container
       nav.navbar.navbar-expand-md.navbar-light.bg-dark.fixed-top
         a(href="#home" onclick="home()").navbar-brand.sitename DPMotorOil
@@ -37,7 +41,6 @@ html
             li.nav-item
               a(href="#QA" onclick="fn(4)").nav-link Q&A
 
-          
     #main
       #home
         .cover
@@ -64,9 +67,6 @@ html
               .col-md-3.col-6(v-for="card in cards.card_experiment")
                 .card
                   card(:card_data="card")
-        
-        
-        
         
       #about
         h1.title 關於DP
@@ -114,7 +114,7 @@ html
       #act
         h1.title 活動與促銷
         .content
-          ul
+          ul.px-1.px-md-5
             li
               .quest
                 a(data-toggle="collapse" href="#act_a1" role="button" aria-expanded="false" aria-controls="a1") Q1. 礦物油與合成油?
@@ -132,10 +132,11 @@ html
                   p.ans_title A2.
                   article.ans
                     p
+
       #QA
         h1.title Q&A
         .content
-          ul
+          ul.px-1.px-md-5
             li
               .quest
                 a(data-toggle="collapse" href="#qa_a1" role="button" aria-expanded="false" aria-controls="a1") Q1. 礦物油與合成油?
@@ -254,7 +255,6 @@ html
                   pre {{card_data.data_intro.intro}}
               .modal-footer
                 button(type="button" class="close" data-dismiss="modal") Close
-
 
     //js
     script(src="./js/index.js")
