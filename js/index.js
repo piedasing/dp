@@ -376,8 +376,11 @@ var vm = new Vue({
 //載入首頁效果
 function loading(){
   $(document).ready(function(){
-    $('#loading').hide(1000)
-    $('#main').css("display","block")
+    $('.cover').ready(function(){
+      $('#loading').hide(1000)
+      $('#main').css("display","block")
+    })
+    
   })
 }
 //點擊continue按鈕後，顯示導覽列、產品、footer
