@@ -28,6 +28,16 @@
     transform: translateY(0px)
     opacity: 1
 
+@keyframes left
+  0% 
+    z-index: 1
+  50% 
+    left: 50px
+
+@keyframes right
+  50% 
+    right: 50px
+
 html,body,#main
   +size(100%)
   margin: 0
@@ -38,10 +48,31 @@ html,body,#main
 #loading
   +size(100%)
   +center
-  background-color: #fff
+  background-color: rgba(255,255,255,0.6)
   font-weight: bold
-  font-size: 25pt
+  font-size: 18pt
+  color: rgba(237,153,22,0.8)
 
+  .myloading
+    position: relative
+    width: 110px
+    height: 50px
+    .left,.right
+      position: absolute
+      top: 0
+      width: 50px
+      height: 50px
+      border-radius: 100%
+      animation: 1s ease-in-out infinite
+    .left
+      background: rgb(237,153,22)
+      left: 0
+      animation-name: left
+    .right 
+      background: rgb(88,181,48)
+      right: 0
+      animation-name: right
+    
 #nav
   display: none
   .sitename
@@ -75,9 +106,15 @@ html,body,#main
         word-wrap: break-all
         padding: 0 50px
       a
-        border: solid 1px #777
+        border: solid 1px #00f
         color: #000
-        opacity: 0.8
+        transition-duration: 0.4s
+      a:hover
+        background-color: #00f
+        border: solid 1px #fff
+        color: #fff
+      span:hover:after
+        content: ">>"
 
   .title
     +size(100%,40px)

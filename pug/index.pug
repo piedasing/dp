@@ -20,7 +20,10 @@ html
     title DPMotorOil
   body(onload="loading()")
     #loading
-      p 網頁載入中...
+      p 網頁載入中
+      .myloading
+        .left
+        .right
       
     #nav.container
       nav.navbar.navbar-expand-md.navbar-light.bg-dark.fixed-top
@@ -47,7 +50,8 @@ html
           h1.display-4 DP專業機油
           p.lead 主打國際技術台灣在地研發、製造、包裝和品管統在地統一管理並接受客戶需求研發各種油化保養產品。
           p.lead 讓每一個消費者能真正使用到符合自己的好產品。            
-          a(href="#product" onclick="start()").btn.btn-light Continue
+          a(href="#product" onclick="start()").btn.btn-light 
+            span Continue
 
       #app
         #product
