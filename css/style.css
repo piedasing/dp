@@ -91,26 +91,41 @@ html, body, #main {
       flex-direction: column;
       width: 100%;
       height: 100%;
-      background: url("../img/cover1.png") center no-repeat;
+      background: url("../img/bg.png") center no-repeat;
       background-size: cover;
       color: #000;
-      padding-top: 20vh; }
+      padding-top: 0px; }
+      #main #home .cover img {
+        width: 40%;
+        min-width: 300px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: solid 1px #aaa; }
       #main #home .cover h1 {
         font-weight: 900;
-        margin-bottom: 40px; }
-      #main #home .cover p {
+        margin-bottom: 30px; }
+      #main #home .cover .p {
+        background-color: rgba(0, 0, 0, 0.6);
         font-weight: 400;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         word-wrap: break-all;
-        padding: 0 50px; }
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #eee; }
       #main #home .cover a {
         border: solid 1px #00f;
         color: #000;
-        transition-duration: 0.4s; }
+        transition-duration: 0.4s;
+        padding: 15px; }
       #main #home .cover a:hover {
         background-color: #00f;
         border: solid 1px #fff;
-        color: #fff; }
+        color: #fff;
+        transition: 1.5s;
+        font-weight: bold; }
       #main #home .cover span:hover:after {
         content: ">>"; }
   #main .title {
