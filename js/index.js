@@ -378,7 +378,7 @@ $(window).on('ready',loading)
 function loading(){
   $('.cover').ready(function(){
     $('#main').css("display","block")
-    $('#loading').hide(1200)
+    $('#loading').hide(1500)
   })
 }
 //點擊continue按鈕後，顯示導覽列、產品、footer
@@ -448,7 +448,7 @@ function fn(i){
 $(function(){
   if($(window).width() < 576){
     $(".navbar a").on("click",function(){
-      $(".navbar-toggler").click();
+      $(".navbar-toggler").click()
     })
   }
 })
