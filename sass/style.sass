@@ -27,6 +27,18 @@
   100%
     transform: translateY(0px)
     opacity: 1
+@keyframes sliceIn //cover
+  0%
+    transform: translateY(-100px)
+    opacity: 0
+  100%
+    transform: translateY(0px)
+    opacity: 1
+@keyframes sliceOut //loading
+  0%
+    opacity: 1
+  100%
+    opacity: 0
 
 @keyframes left
   0% 
@@ -52,7 +64,7 @@ html,body,#main
   font-weight: bold
   font-size: 18pt
   color: rgba(237,153,22,0.8)
-
+  animation: sliceOut 2.5s 0.1s ease
   .myloading
     position: relative
     width: 110px
@@ -87,9 +99,12 @@ html,body,#main
 
 #main
   display: none
+  
   #home
     background-color: #ccc
-    animation: sliceIn_left 1s 0.1s ease
+    opacity: 0
+    transition: opacity 1.5s
+    animation: sliceIn 2s 0.1s ease
     .cover
       +center
       +size(100%)

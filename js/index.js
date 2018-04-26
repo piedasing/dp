@@ -374,11 +374,13 @@ var vm = new Vue({
 //*******************functions***********************//
 //***************************************************//
 //載入首頁效果
-$(window).on('ready',loading)
+window.onload = loading
 function loading(){
+  var home = document.getElementById("home")
+  home.style.opacity = 1
   $('.cover').ready(function(){
+    $('#loading').css("display","none")
     $('#main').css("display","block")
-    $('#loading').hide(1500)
   })
 }
 //點擊continue按鈕後，顯示導覽列、產品、footer
